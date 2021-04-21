@@ -6,7 +6,7 @@ class CreatePhotos < ActiveRecord::Migration[6.1]
       t.integer :likes_count, default: 0
       t.text :caption
       t.references :owner, null: false, foreign_key: {to_table: :users}, index: true
-
+      #t.belong_to :owner, null: false, foreign_key: {to_table: :users}, index: true
       t.timestamps
     end
   end
